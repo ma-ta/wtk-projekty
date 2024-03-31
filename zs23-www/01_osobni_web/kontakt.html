@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+
+<!--
+    projekt:
+        SEMESTRÁLNÍ PRÁCE
+        Osobní webová prezentace
+
+    autor:
+        jméno     :  Martin TÁBOR
+        kontakt   :  st72836@student.upce.cz
+        škola     :  UPCE - FEI
+        obor      :  Webové technologie (Bc., komb.)
+
+    předmět:
+        název     :  World Wide Web (KWWW)
+        rok       :  ZS 2023/24
+        vyučující :  Ing. Lukáš ČEGAN, Ph.D.
+
+    soubor:
+        název     :  o.html
+        verze     :  2.0.0
+        datum     :  2024-02-10
+-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="obr/logo-mata.svg">
+    <title>Mr. Martin Tábor</title>
+</head>
+<body>
+    <header>
+        <img src="obr/logo-mata.svg" alt="logo" id="logo" title="První mezi rovnými">
+        <section id="hlavicka-vpravo">
+            <h1 id="titulek">
+                <a href="#" title="Úvod"><strong>M</strong>artin<strong>T</strong>abor.eu</a>
+            </h1>
+            <h2 id="podtitulek">
+                Osobní stránky Martina Tábora &mdash;
+                vzdělance třídy cimrmanovské&nbsp;&amp;&nbsp;entuziasty domény informačně technologické
+            </h2>
+            <nav>
+                <ul id="navigace">
+                    <a href="#" class="nav-item nav-item-first"><li class="nav-item-first"><img src="obr/ico-info.svg" alt="ikona info">O autorovi</li></a>
+                    <a href="#" class="nav-item"><li><img src="obr/ico-galerie.svg" alt="ikona galerie">Portfolio</li></a>
+                    <a href="#" class="nav-item nav-item-last"><li class="nav-item-last nav-item-aktivni"><img src="obr/ico-kontakt.svg" alt="ikona zavináč">Kontakt</li></a>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <div class="clearfix"></div>
+    <main>
+        <article>
+            <h1>Kontakt</h1>
+            <form action="#" id="formular-kontakt">
+                <fieldset>
+                    <input type="text" placeholder="Vaše ctěné jméno" required>
+                    <input type="email" required  placeholder="Kam Vám mohu odepsat?">
+                    <label for="input-chvala">Hodláte mě prostřednictvím Vaší zprávy pochválit?</label>
+                    <input id="input-chvala" name="input-chvala" type="checkbox" title="Pochvala" required>
+                    <br>
+                    <textarea placeholder="Text Vaší zprávy."></textarea>
+                    <button type="submit">Odeslat</button>
+                    <button type="reset">Vymazat</button>
+                </fieldset>
+            </form>
+            <br>
+            <h1>Adresa</h1>
+            <address>
+                Martin&nbsp;TÁBOR<br>
+                Ulice&nbsp;1234<br>
+                280&nbsp;02&nbsp;&nbsp;&nbsp;KOLÍN V
+            </address>
+            <img src="obr/fotky/sidlo.webp" alt="sídlo">
+        </article>
+    </main>
+    <footer>
+        <p>&copy;&nbsp;2023&ndash;2024&nbsp;&nbsp;Martin Tábor</p>
+    </footer>
+    <a href="#" title="Nahoru" id="zpet_nahoru"><</a>
+</body>
+</html>

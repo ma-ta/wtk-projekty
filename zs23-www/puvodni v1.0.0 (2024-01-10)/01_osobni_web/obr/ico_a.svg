@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="24" width="24" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <title id="title3007">ico_a</title>
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>ico_a</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(-360.04099,-514.89444)">
+  <path id="path2985" stroke-linejoin="miter" d="m372.04,514.96a11.938,11.938,0,1,0,0,23.875,11.938,11.938,0,0,0,0,-23.875z" fill-rule="evenodd" stroke="#000" stroke-linecap="butt" stroke-width="0.0474142px" fill="#000"/>
+  <text id="text2987" style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-family="Liberation Serif" xml:space="preserve" font-size="3.94493651px" font-style="normal" y="531.4259" x="366.94128" font-weight="normal" fill="#ffffff"><tspan id="tspan2989" font-size="19.72468185px" font-family="Liberation Serif" font-style="normal" font-stretch="normal" font-variant="normal" y="531.4259" x="366.94128" font-weight="bold" fill="#ffffff">a</tspan></text>
+  <flowRoot id="flowRoot2991" style="letter-spacing:0px;word-spacing:0px;" font-family="Sans" xml:space="preserve" font-size="40px" line-height="125%" font-style="normal" font-weight="normal" fill="#000000"><flowRegion id="flowRegion2993"><rect id="rect2995" y="370.59" width="417.27" height="372" x="185.29"/></flowRegion><flowPara id="flowPara2997"/></flowRoot>
+  <flowRoot id="flowRoot2999" style="letter-spacing:0px;word-spacing:0px;" font-family="Sans" xml:space="preserve" font-size="40px" line-height="125%" font-style="normal" font-weight="normal" fill="#000000"><flowRegion id="flowRegion3001"><rect id="rect3003" y="267.33" width="504.96" height="550.23" x="79.21"/></flowRegion><flowPara id="flowPara3005"/></flowRoot>
+ </g>
+</svg>

@@ -1,0 +1,578 @@
+﻿/*
+    projekt:
+        SEMESTRÁLNÍ PRÁCE
+        Ovládací pult RGB LED
+
+    autor:
+        jméno     :  Martin TÁBOR
+        kontakt   :  st72836@student.upce.cz
+        škola     :  UPCE - FEI
+        obor      :  Webové technologie (Bc., komb.)
+
+    předmět:
+        název     :  World Wide Web (KWWW)
+        rok       :  ZS 2023/24
+        vyučující :  Ing. Lukáš ČEGAN, Ph.D.
+
+    soubor:
+        název     :  style.css
+        verze     :  2.0.0
+        datum     :  2024-02-10
+*/
+
+
+@media screen and (min-width: 550px) {
+
+	:root {
+		/* KONSTANTY */
+		--color-cervenaLed: #de8787;
+		--color-zelenaLed:  #bcd35f;
+		--color-modraLed:   #afdde9;
+		--color-hover:      #ffeeaa;
+		--color-active:     #ffdf3e;
+		--color-background: #f0f0f0;
+		--color-ohraniceni: #999999;
+		--rohy-zakulaceni:  100px;
+		--width-max:        1300px;
+		--height-input:     25px;
+
+		background-color: var(--color-background);
+	}
+
+	::selection {
+		background-color: var(--color-hover);
+	}
+
+	body {
+		margin: auto;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 11pt;
+		max-width: var(--width-max);
+	}
+
+	img {
+		user-select: none;
+	}
+
+	p {
+		margin-bottom: 11pt;
+	}
+
+	header {
+		padding: 50px 0;
+		border-bottom: 1px solid var(--color-ohraniceni);
+		position: fixed;
+		top: 0;
+		width: 100%;
+		max-width: var(--width-max);
+		height: 130px;
+		background-color: var(--color-background);
+		z-index: 1;
+	}
+
+	header h1 {
+		margin: 0 0 10px 0;
+	}
+
+	#logo {
+		height: 128px;
+		margin: 0 50px;
+		float: left;
+	}
+
+	#titulek {
+		margin-top: 25px;
+	}
+
+	main {
+		text-align: center;
+		position: relative;
+		top: 251px; /* min 231px */
+		padding-bottom: 100px;
+		font-size: 12pt;
+	}
+
+	.ovladaci_pult fieldset {
+		border: 1px solid var(--color-ohraniceni);
+	}
+
+	.ovladaci_pult-sekce fieldset {
+		border: 2px dotted var(--color-ohraniceni);
+	}
+
+	.ovladaci_pult legend {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ovladaci_pult-sekce-nastaveni {
+		text-align: left;
+	}
+
+	.ovladaci_pult input {
+		box-sizing: border-box;
+		width: 100%;
+		height: var(--height-input);
+		padding-left: 15px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-size: 12pt;
+		vertical-align: middle;
+	}
+
+	.ovladaci_pult select {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px 0 5px 15px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-left: auto;
+		margin-right: auto;
+		height: var(--color-modraLed);
+		font-size: 12pt;
+		vertical-align: middle;
+	}
+
+	.ovladaci_pult select:hover {
+		background-color: var(--color-hover);
+	}
+
+	.ovladaci_pult select:active {
+		background-color: var(--color-active);
+	}
+
+	.ovladaci_pult-sekce legend {
+		background-color: var(--color-background);
+	}
+
+	.ovladaci_pult-sekce-vypinace label {
+		text-transform: uppercase;
+		cursor: grab;
+	}
+
+	.ovladaci_pult-sekce-nastaveni label {
+		width: 60px;
+		display: inline-block;
+	}
+
+	.ovladaci_pult-sekce-vypinace {
+		float: left;
+	}
+
+	.ovladaci_pult-sekce-vypinace input[type=radio] {
+		appearance: none;
+		width: var(--height-input);
+		height: var(--height-input);
+		background: #fff;
+		vertical-align: middle;
+		display: block;
+		margin: 15px auto;
+		cursor: grab;
+	}
+
+	.ovladaci_pult-sekce-vypinace input[type=radio]:hover {
+		background-color: var(--color-hover);
+	}
+
+	.ovladaci_pult-sekce-vypinace input[type=radio]:active {
+		background-color: var(--color-active);
+	}
+
+	.ovladaci_pult-sekce-vypinace input[type=radio]:checked {
+		background-color: #000;
+	}
+
+	#sekce-led0 .ovladaci_pult-sekce-vypinace.zap {
+		background-color: var(--color-cervenaLed);
+	}
+
+	#sekce-led1 .ovladaci_pult-sekce-vypinace.zap {
+		background-color: var(--color-zelenaLed);
+	}
+
+	#sekce-led2 .ovladaci_pult-sekce-vypinace.zap {
+		background-color: var(--color-modraLed);
+	}
+
+	@keyframes blik {
+		50% {
+			background: transparent;
+		}
+	}
+
+	.ovladaci_pult-sekce-vypinace.zap.blik-1000 {
+		animation: blik 2s step-end infinite;
+	}
+	.ovladaci_pult-sekce-vypinace.zap.blik-250 {
+		animation: blik 0.5s step-end infinite;
+	}
+
+	fieldset.ovladaci_pult-sekce {
+		margin: 20px;
+	}
+
+	.ovladaci_pult-sekce fieldset {
+		padding: 20px;
+		margin: 10px;
+	}
+
+	legend.ovladaci_pult-sekce {
+		padding: 10px 15px;
+	}
+
+	#sekce-led0 legend.ovladaci_pult-sekce {
+		background-color: var(--color-cervenaLed);
+	}
+
+	#sekce-led1 legend.ovladaci_pult-sekce {
+		background-color: var(--color-zelenaLed);
+	}
+
+	#sekce-led2 legend.ovladaci_pult-sekce {
+		background-color: var(--color-modraLed);
+	}
+
+	.led-nastaveni-rezim {
+		border: 2px dotted var(--color-ohraniceni);
+		padding: 10px 15px;
+	}
+
+	.ovladaci_pult input[type=range] {
+		appearance: none;
+		padding-left: 0;
+		background-color: #fff;
+		border: 1px solid var(--color-ohraniceni);
+	}
+
+	.ovladaci_pult input[type=range]:hover {
+		background: var(--color-hover);
+	}
+
+	.ovladaci_pult input[type=range]:active {
+		background: var(--color-active);
+	}
+
+	.ovladaci_pult input[type=range]::-webkit-slider-thumb {
+		appearance: none;
+		width: calc(var(--height-input) / 1.5);
+		height: var(--height-input);
+		background-color: #000;
+	}
+
+	footer p {
+		margin: 7pt 0;
+	}
+
+	footer {
+		border-top: 1px solid var(--color-ohraniceni);
+		padding: 10px 0;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		max-width: var(--width-max);
+		background-color: var(--color-background);
+		z-index: 1;
+	}
+
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+}  /* // @media screen and (min-width: 500px) */
+
+
+@media screen and (max-height: 849px) {
+
+	header {
+		padding: 50px 0;
+		border-bottom: 1px solid var(--color-ohraniceni);
+		position: absolute;
+		top: 0;
+		width: 100%;
+		max-width: var(--width-max);
+		height: 130px;
+		background-color: var(--color-background);
+		z-index: 1;
+		text-align: left;
+	}
+
+	main {
+		text-align: center;
+		position: relative;
+		top: 251px; /* min 231px */
+		padding-bottom: 100px;
+		font-size: 12pt;
+	}
+
+}  /* // @media screen and (max-height: 849px) */
+
+
+@media screen and (max-width: 549px) {
+
+	:root {
+		/* KONSTANTY */
+		--color-cervenaLed: #de8787;
+		--color-zelenaLed:  #bcd35f;
+		--color-modraLed:   #afdde9;
+		--color-hover:      #ffeeaa;
+		--color-active:     #ffdf3e;
+		--color-background: #f0f0f0;
+		--color-ohraniceni: #999999;
+		--rohy-zakulaceni:  100px;
+		--width-max:        1300px;
+		--height-input:     25px;
+
+		background-color: var(--color-background);
+	}
+
+	::selection {
+		background-color: var(--color-hover);
+	}
+
+	body {
+		margin: auto;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 11pt;
+		max-width: var(--width-max);
+	}
+
+	img {
+		user-select: none;
+	}
+
+	p {
+		margin-bottom: 11pt;
+	}
+
+	header {
+		padding: 40px 0;
+		border-bottom: 1px solid var(--color-ohraniceni);
+		position: absolute;
+		top: 0;
+		width: 100%;
+		max-width: var(--width-max);
+		height: 265px;
+		background-color: var(--color-background);
+		z-index: 1;
+		text-align: center;
+	}
+
+	header h1 {
+		margin: 0 0 10px 0;
+	}
+
+	#logo {
+		height: 150px;
+		text-align: center;
+	}
+
+	#titulek {
+		margin-top: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	main {
+		text-align: center;
+		position: relative;
+		top: 360px; /* min 346px */
+		padding-bottom: 100px;
+		font-size: 12pt;
+	}
+
+	.ovladaci_pult fieldset {
+		border: 1px solid var(--color-ohraniceni);
+	}
+
+	.ovladaci_pult-sekce fieldset {
+		border: 2px dotted var(--color-ohraniceni);
+	}
+
+	.ovladaci_pult legend {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ovladaci_pult-sekce-nastaveni {
+		text-align: left;
+	}
+
+	.ovladaci_pult input {
+		box-sizing: border-box;
+		width: 100%;
+		height: var(--height-input);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-size: 12pt;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.ovladaci_pult select {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px 0 5px 15px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-left: auto;
+		margin-right: auto;
+		height: var(--color-modraLed);
+		font-size: 12pt;
+		vertical-align: middle;
+	}
+
+	.ovladaci_pult select:hover {
+		background-color: var(--color-hover);
+	}
+
+	.ovladaci_pult select:active {
+		background-color: var(--color-active);
+	}
+
+	.ovladaci_pult-sekce legend {
+		background-color: var(--color-background);
+	}
+
+	.ovladaci_pult-sekce-vypinace label {
+		text-transform: uppercase;
+		cursor: grab;
+	}
+
+	.ovladaci_pult-sekce-nastaveni label {
+		width: 60px;
+		display: inline-block;
+	}
+
+	.ovladaci_pult-sekce-vypinace input[type=radio] {
+		appearance: none;
+		width: var(--height-input);
+		height: var(--height-input);
+		background: #fff;
+		vertical-align: middle;
+		display: inline-block;
+		margin: 10px 15px;
+		cursor: grab;
+	}
+
+	.ovladaci_pult-sekce-vypinace input[type=radio]:hover {
+		background-color: var(--color-hover);
+	}
+
+	.ovladaci_pult-sekce-vypinace input[type=radio]:active {
+		background-color: var(--color-active);
+	}
+
+	.ovladaci_pult-sekce-vypinace input[type=radio]:checked {
+		background-color: #000;
+	}
+
+	#sekce-led0 .ovladaci_pult-sekce-vypinace.zap {
+		background-color: var(--color-cervenaLed);
+	}
+
+	#sekce-led1 .ovladaci_pult-sekce-vypinace.zap {
+		background-color: var(--color-zelenaLed);
+	}
+
+	#sekce-led2 .ovladaci_pult-sekce-vypinace.zap {
+		background-color: var(--color-modraLed);
+	}
+
+	@keyframes blik {
+		50% {
+			background: transparent;
+		}
+	}
+
+	.ovladaci_pult-sekce-vypinace.zap.blik-1000 {
+		animation: blik 2s step-end infinite;
+	}
+	.ovladaci_pult-sekce-vypinace.zap.blik-250 {
+		animation: blik 0.5s step-end infinite;
+	}
+
+	fieldset.ovladaci_pult-sekce {
+		margin: 20px;
+	}
+
+	.ovladaci_pult-sekce fieldset {
+		padding: 20px;
+		margin: 10px;
+	}
+
+	legend.ovladaci_pult-sekce {
+		padding: 10px 15px;
+	}
+
+	#sekce-led0 legend.ovladaci_pult-sekce {
+		background-color: var(--color-cervenaLed);
+	}
+
+	#sekce-led1 legend.ovladaci_pult-sekce {
+		background-color: var(--color-zelenaLed);
+	}
+
+	#sekce-led2 legend.ovladaci_pult-sekce {
+		background-color: var(--color-modraLed);
+	}
+
+	.led-nastaveni-rezim {
+		border: 2px dotted var(--color-ohraniceni);
+		padding: 10px 15px;
+	}
+
+	.ovladaci_pult input[type=range] {
+		appearance: none;
+		padding-left: 0;
+		background-color: #fff;
+		border: 1px solid var(--color-ohraniceni);
+	}
+
+	.ovladaci_pult input[type=range]:hover {
+		background: var(--color-hover);
+	}
+
+	.ovladaci_pult input[type=range]:active {
+		background: var(--color-active);
+	}
+
+	.ovladaci_pult input[type=range]::-webkit-slider-thumb {
+		appearance: none;
+		width: calc(var(--height-input) / 1.5);
+		height: var(--height-input);
+		background-color: #000;
+	}
+
+	footer p {
+		margin: 7pt 0;
+	}
+
+	footer {
+		border-top: 1px solid var(--color-ohraniceni);
+		padding: 10px 0;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		max-width: var(--width-max);
+		background-color: var(--color-background);
+		z-index: 1;
+	}
+
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+}  /* // @media screen and (max-width: 499px) */
+

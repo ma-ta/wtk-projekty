@@ -1,0 +1,107 @@
+<!--
+    projekt:
+        SEMESTRÁLNÍ PRÁCE
+        03 Řídicí pult RPi2 LEDs
+           (Webové rozhraní pro ovládání LED na desce Raspberry Pi 2 Model B)
+
+    autor:
+        jméno     :  Martin TÁBOR
+        kontakt   :  st72836@student.upce.cz
+        škola     :  UPCE - FEI
+        obor      :  Webové technologie (Bc., komb.)
+
+    předmět:
+        název     :  World Wide Web (KWWW)
+        rok       :  ZS 2023/24
+        vyučující :  Ing. Lukáš ČEGAN, Ph.D.
+
+    soubor:
+        název     :  index.php
+        verze     :  1.0.0
+        datum     :  2023-12-15
+-->
+
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8" />
+	<title>Řídicí pult RPi2 LEDs</title>
+
+	<meta name="author" content="Martin TÁBOR" />
+	<!-- responsivní design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- client-side skripty -->
+	<script type="text/javascript" src="kod.js"></script>
+	<!-- načtení písma Inconsolata ze serverů Googlu (volitelné) -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext" />
+	<link rel="stylesheet" href="styly.css" />
+	<!-- favikonka -->
+	<link rel="shortcut icon" href="grafika/favicon.ico" />
+</head>
+<body>
+	<header id="zahlavi">
+		<table>
+			<tr>
+				<td style="padding-right: 35px;">
+					<img src="grafika/logo.png" alt="logo" />
+				</td>
+				<td>
+					<h1>Řídicí pult RPi2 LEDs</h1>
+					<p>Webové rozhraní pro ovládání LED na desce Raspberry Pi 2 Model B</p>
+				</td>
+			</tr>
+		</table>
+	</header>
+
+	<main id="obsah">
+		<table class="ovladace_tabulka">
+			<tr>
+				<th rowspan="2" style="background-color: #006400; width: 30%;">
+					Zelená<br />(ACT, led0)
+				</th>
+				<td style="width: 50%">
+					<button id="onLed0" title="Zapnout LED 0" class="ovladace_tlacitkoOn"">Zap</button>
+				</td>
+				<td class="ovladace_stav" rowspan="2" style="width: 20%;">
+					<div id="ovladace_stav-vypnuto" class="ovladace_stav-vypnuto" title="Tato LED nesvítí.">Vyp</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="offLed0" title="Vypnout LED 0" class="ovladace_tlacitkoOff">Vyp</button>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="2" style="background-color: #8B0000;">
+					Červená<br />(PWR, led1)
+				</th>
+				<td>
+					<button id="onLed1" title="Zapnout LED 1" class="ovladace_tlacitkoOn">Zap</button>
+				</td>
+				<td class="ovladace_stav" rowspan="2">
+					<div id="ovladace_stav-zapnuto" class="ovladace_stav-zapnuto" title="Tato LED svítí.">Zap</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="offLed1" title="Vypnout LED 1" class="ovladace_tlacitkoOff">Vyp</button>
+				</td>
+			</tr>
+		</table>
+	</main>
+
+	<footer id="zapati">
+		<table style="width: 100%; vertical-align: middle; text-align: center;">
+			<tr>
+				<!-- informace o verzi a autorovi -->
+				<td>
+					<p>verze:&nbsp;1.0.0&nbsp;|&nbsp;2023-12-15</p>
+					<p>&copy;&nbsp;2023&ndash;2024&nbsp;&nbsp;Martin&nbsp;TÁBOR</p>
+				</td>
+			</tr>
+		</table>
+	</footer>
+
+</body>
+</html>

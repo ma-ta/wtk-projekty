@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+
+<!--
+    projekt:
+        SEMESTRÁLNÍ PRÁCE
+        Ovládací pult RGB LED
+
+    autor:
+        jméno     :  Martin TÁBOR
+        kontakt   :  st72836@student.upce.cz
+        škola     :  UPCE - FEI
+        obor      :  Webové technologie (Bc., komb.)
+
+    předmět:
+        název     :  World Wide Web (KWWW)
+        rok       :  ZS 2023/24
+        vyučující :  Ing. Lukáš ČEGAN, Ph.D.
+
+    soubor:
+        název     :  index.html
+        verze     :  2.0.0
+        datum     :  2024-02-10
+-->
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ovládací pult RGB LED</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- stažení fontu ze serverů Googlu -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+	<!-- CSS styly -->
+	<link rel="stylesheet" href="style.css" />
+	<!-- favikonka -->
+	<link rel="icon" type="image/x-icon" href="obr/logo.svg">
+</head>
+<body>
+	<header>
+		<img id="logo" src="obr/logo.svg" alt="Logo">
+		<section id="titulek">
+			<h1>Ovládací pult RGB LED</h1>
+			<p>Webové rozhraní pro vzdálené ovládání světelného zdroje</p>
+		</section>
+		<div class="clearfix"></div>
+	</header>
+
+	<main>
+		<article id="ovladaci_pult-led" class="ovladaci_pult">
+
+			<!-- červená LED -->
+			<fieldset id="sekce-led0" class="ovladaci_pult-sekce">
+				<legend class="ovladaci_pult-sekce" title="LED 0">Červená (R) LED</legend>
+
+				<fieldset class="ovladaci_pult-sekce-vypinace">
+					<legend>Vypínač</legend>
+					<label for="led0-vypinace-zap">Zap</label>
+					<input type="radio" name="radio-led0" id="led0-vypinace-zap" value="zap">
+					<label for="led0-vypinace-vyp">Vyp</label>
+					<input type="radio" name="radio-led0" id="led0-vypinace-vyp" value="vyp" checked>
+				</fieldset>
+
+				<fieldset class="ovladaci_pult-sekce-nastaveni">
+					<legend>Nastavení</legend>
+
+					<label for="led0-nastaveni-intenzita">Svit:&nbsp;25&nbsp;%</label>
+					<input type="range" id="led0-nastaveni-intenzita" value="25" min="0" max="100">
+					<div class="led-nastaveni-rezim">
+						<label for="led0-nastaveni-rezim">Režim:</label>
+						<select id="led0-nastaveni-rezim">
+							<option value="sviti" selected>Svítí</option>
+							<option value="blika">Bliká</option>
+						</select>
+						<div class="led-zap_vyp_ms">
+							<label for="led0-nastaveni-vyp_ms">Vyp:</label>
+							<input id="led0-nastaveni-vyp_ms" type="number" min="100" step="100" placeholder="0" value="1000" required disabled>
+							<br><label for="led0-nastaveni-zap_ms">Zap:</label>
+							<input id="led0-nastaveni-zap_ms" type="number" min="100" step="100" placeholder="0" value="1000" required disabled>
+						</div>
+					</div>
+				</fieldset>
+
+			</fieldset>  <!-- // červená LED -->
+
+			<!-- zelená LED -->
+			<fieldset id="sekce-led1" class="ovladaci_pult-sekce">
+				<legend class="ovladaci_pult-sekce" title="LED 1">Zelená (G) LED</legend>
+
+				<fieldset class="ovladaci_pult-sekce-vypinace zap blik-1000">
+					<legend>Vypínač</legend>
+					<label for="led1-vypinace-zap">Zap</label>
+					<input type="radio" name="radio-led1" id="led1-vypinace-zap" value="zap" checked>
+					<label for="led1-vypinace-vyp">Vyp</label>
+					<input type="radio" name="radio-led1" id="led1-vypinace-vyp" value="vyp">
+				</fieldset>
+
+				<fieldset class="ovladaci_pult-sekce-nastaveni">
+					<legend>Nastavení</legend>
+
+					<label for="led1-nastaveni-intenzita">Svit:&nbsp;100&nbsp;%</label>
+					<input type="range" id="led1-nastaveni-intenzita" value="100" min="0" max="100">
+					<div class="led-nastaveni-rezim">
+						<label for="led1-nastaveni-rezim">Režim:</label>
+						<select id="led1-nastaveni-rezim">
+							<option value="sviti">Svítí</option>
+							<option value="blika" selected>Bliká</option>
+						</select>
+						<div class="led-zap_vyp_ms">
+							<label for="led1-nastaveni-vyp_ms">Vyp:</label>
+							<input id="led1-nastaveni-vyp_ms" type="number" min="100" step="100" placeholder="0" value="1000" required>
+							<label for="led1-nastaveni-zap_ms">Zap:</label>
+							<input id="led1-nastaveni-zap_ms" type="number" min="100" step="100" placeholder="0" value="1000" required>
+						</div>
+					</div>
+				</fieldset>
+
+			</fieldset>  <!-- // zelená LED -->
+
+			<!-- modrá LED -->
+			<fieldset id="sekce-led2" class="ovladaci_pult-sekce">
+				<legend class="ovladaci_pult-sekce" title="LED 2">Modrá (B) LED</legend>
+
+				<fieldset class="ovladaci_pult-sekce-vypinace zap blik-250">
+					<legend>Vypínač</legend>
+					<label for="led2-vypinace-zap">Zap</label>
+					<input type="radio" name="radio-led2" id="led2-vypinace-zap" value="zap" checked>
+					<label for="led2-vypinace-vyp">Vyp</label>
+					<input type="radio" name="radio-led2" id="led2-vypinace-vyp" value="vyp">
+				</fieldset>
+
+				<fieldset class="ovladaci_pult-sekce-nastaveni">
+					<legend>Nastavení</legend>
+
+					<label for="led2-nastaveni-intenzita">Svit:&nbsp;5&nbsp;%</label>
+					<input type="range" id="led2-nastaveni-intenzita" value="5" min="0" max="100">
+					<div class="led-nastaveni-rezim">
+						<label for="led2-nastaveni-rezim">Režim:</label>
+						<select id="led2-nastaveni-rezim">
+							<option value="sviti">Svítí</option>
+							<option value="blika" selected>Bliká</option>
+						</select>
+						<div class="led-zap_vyp_ms">
+							<label for="led2-nastaveni-vyp_ms">Vyp:</label>
+							<input id="led2-nastaveni-vyp_ms" type="number" min="100" step="100" placeholder="0" value="250" required>
+							<br><label for="led2-nastaveni-zap_ms">Zap:</label>
+							<input id="led2-nastaveni-zap_ms" type="number" min="100" step="100" placeholder="0" value="250" required>
+						</div>
+					</div>
+				</fieldset>
+
+			</fieldset>  <!-- // modrá LED -->
+
+		</article>
+	</main>
+
+	<footer>
+		<p><span title="verze aplikace">v2.0.0</span>&nbsp;|&nbsp;<span title="datum verze">2024-02-10</span></p>
+		<p>&copy;&nbsp;2023&ndash;2024&nbsp;&nbsp;Martin&nbsp;Tábor</p>
+	</footer>
+
+</body>
+</html>

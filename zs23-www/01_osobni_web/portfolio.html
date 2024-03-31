@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+
+<!--
+    projekt:
+        SEMESTRÁLNÍ PRÁCE
+        Osobní webová prezentace
+
+    autor:
+        jméno     :  Martin TÁBOR
+        kontakt   :  st72836@student.upce.cz
+        škola     :  UPCE - FEI
+        obor      :  Webové technologie (Bc., komb.)
+
+    předmět:
+        název     :  World Wide Web (KWWW)
+        rok       :  ZS 2023/24
+        vyučující :  Ing. Lukáš ČEGAN, Ph.D.
+
+    soubor:
+        název     :  o.html
+        verze     :  2.0.0
+        datum     :  2024-02-10
+-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="obr/logo-mata.svg">
+    <title>Mr. Martin Tábor</title>
+    <style>
+        article p {
+            text-align: center;
+            text-indent: 0;
+        }
+        ul.platformy {
+            text-align: center;
+            border: 1px solid #999999;
+            background-color: #fafafa;
+            border-radius: 100px;
+            width: fit-content;
+            margin: 20px auto 50px auto;
+            padding: 10px;
+        }
+        ul.platformy li {
+            font-size: 11pt;
+            display: inline-block;
+            padding: 10px;
+            margin: 0 2px;
+            background-color: #f0f0f0;
+            border: 1px solid #999999;
+            border-radius: 100px;
+        }
+        main h2 {
+            margin: 100px 0 50px 0;
+            background-color: var(--barva-pozadi-svetle);
+            border: 1px solid var(--barva-ohraniceni);
+            border-radius: var(--rohy-zakulaceni);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="obr/logo-mata.svg" alt="logo" id="logo" title="První mezi rovnými">
+        <section id="hlavicka-vpravo">
+            <h1 id="titulek">
+                <a href="#" title="Úvod"><strong>M</strong>artin<strong>T</strong>abor.eu</a>
+            </h1>
+            <h2 id="podtitulek">
+                Osobní stránky Martina Tábora &mdash;
+                vzdělance třídy cimrmanovské&nbsp;&amp;&nbsp;entuziasty domény informačně technologické
+            </h2>
+            <nav>
+                <ul id="navigace">
+                    <a href="#" class="nav-item nav-item-first"><li class="nav-item-first"><img src="obr/ico-info.svg" alt="ikona info">O autorovi</li></a>
+                    <a href="#" class="nav-item"><li class="nav-item-aktivni"><img src="obr/ico-galerie.svg" alt="ikona galerie">Portfolio</li></a>
+                    <a href="#" class="nav-item nav-item-last"><li class="nav-item-last"><img src="obr/ico-kontakt.svg" alt="ikona zavináč">Kontakt</li></a>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <div class="clearfix"></div>
+    <main>
+        <h1 style="float: left">Portfolio projektů</h1>
+        <a style="float: right" href="https://github.com/ma-ta" target="_blank">GitHub&nbsp;&mdash;&nbsp;Ma-TA</a>
+        <div class="clearfix"></div>
+        <article>
+            <h2><a href="https://github.com/ma-ta/hra-sibenice" target="_blank" title="GitHub">Hra ŠI_E_ICE</a></h2>
+            <img src="obr/portfolio/sibenice-ico.svg" alt="ikona aplikace">
+            <p class="popisek"><strong>Popis:</strong> Terminálová implementace známé slovní hry šibenice (oběšenec)</p>
+            <p class="detail"><strong>Technologie:</strong> jazyk C (ANSI/ISO) / kompilátory MSVC, GCC, DJGPP</p>
+            <ul class="platformy">
+                <li>MS-DOS</li>
+                <li>FreeDOS</li>
+                <li>Windows</li>
+                <li>UN*X</li>
+                <li>&hellip;</li>
+            </ul>
+            <img src="obr/portfolio/sibenice-01.png" alt="screenshot">
+            <img src="obr/portfolio/sibenice-02.png" alt="screenshot">
+            <img src="obr/portfolio/sibenice-03.png" alt="screenshot">
+            <h2><a href="https://web.archive.org/web/20110426033433/http://www.oakolin.eu" target="_blank" title="The Wayback Machine">OA Kolín</a></h2>
+            <p class="popisek"><strong>Popis:</strong> Školní web pro Obchodní akademii Kolín</p>
+            <p class="detail"><strong>Technologie:</strong> XHTML+CSS+JS, PHP</p>
+            <ul class="platformy">
+                <li>web</li>
+            </ul>
+            <img src="obr/portfolio/oa.png" alt="screenshot">
+            <h2><a href="https://github.com/ma-ta/brzdenka-plus" target="_blank" title="GitHub">Brzděnka+</a></h2>
+            <p class="popisek"><strong>Popis:</strong> Výpočet maximální rychlosti vlaku při nedostatku brzdicích procent</p>
+            <p class="detail"><strong>Technologie:</strong> HTML+CSS, <a href="https://brython.info" target="_blank">Brython</a>, <a href="https://sweetalert2.github.io" target="_blank">SweetAlert2</a></p>
+            <ul class="platformy">
+                <li>web</li>
+            </ul>
+            <img src="obr/portfolio/brzdenka.png" alt="screenshot">
+            <h2><a href="https://github.com/ma-ta/serio" target="_blank" title="GitHub">SerIO</a></h2>
+            <p class="popisek"><strong>Popis:</strong> Jednoduchý sériový terminál (pro Arduino apod.)</p>
+            <p class="detail"><strong>Technologie:</strong> C#, WPF, <a href="https://dotnet.microsoft.com/en-us/" target="_blank">.NET SDK</a></p>
+            <ul class="platformy">
+                <li>Windows</li>
+            </ul>
+            <img src="obr/portfolio/serio.png" alt="screenshot">
+            <h2><a href="https://github.com/ma-ta/hms-odpocet" target="_blank" title="GitHub">HMS Odpočet</a></h2>
+            <p class="popisek"><strong>Popis:</strong> Nástroj na odpočet času a vypnutí PC</p>
+            <p class="detail"><strong>Technologie:</strong> Delphi (<a href="https://www.embarcadero.com/products/rad-studio" target="_blank">Embarcadero RAD Studio</a>)</p>
+            <ul class="platformy">
+                <li>Windows</li>
+            </ul>
+            <img src="obr/portfolio/hms_odpocet.png" alt="screenshot">
+            <h2><a href="https://github.com/ma-ta/bylo-metr" target="_blank" title="GitHub">BýloMetr</a></h2>
+            <p class="popisek"><strong>Popis:</strong> Digitální monitorovací stanice s Wi-Fi, webovým serverem a LCD displejem</p>
+            <p class="detail"><strong>Technologie:</strong> <a href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE</a>, Arduino Uno, ESP8266</p>
+            <ul class="platformy">
+                <li>IoT / web</li>
+            </ul>
+            <img src="obr/portfolio/bylometr.jpg" alt="screenshot">
+            <h2><a href="https://github.com/ma-ta/piskvorky1d" target="_blank" title="GitHub">Piškvorky 1D</a></h2>
+            <p class="popisek"><strong>Popis:</strong> (Pouze test Xcode IDE a jazyka Swift)</p>
+            <p class="detail"><strong>Technologie:</strong> <a href="https://developer.apple.com/xcode" target="_blank">Xcode</a> (macOS 11 / Apple Silicon)</p>
+            <ul class="platformy">
+                <li>macOS</li>
+            </ul>
+            <img src="obr/portfolio/piskvorky_1d.png" alt="screenshot">
+            <h2><a href="https://github.com/ma-ta/adhoc-webreg" target="_blank" title="GitHub">Ad-hoc WebReg</a></h2>
+            <p class="popisek"><strong>Popis:</strong> Microsite s registračním formulářem a napojením na databázi MySQL</p>
+            <p class="detail"><strong>Technologie:</strong> HTML+CSS+JS, PHP, MySQL</p>
+            <ul class="platformy">
+                <li>web</li>
+            </ul>
+            <img src="obr/portfolio/webreg-01.png" alt="screenshot">
+            <img src="obr/portfolio/webreg-02.png" alt="screenshot">
+            <img src="obr/portfolio/webreg-03.png" alt="screenshot">
+        </article>
+    </main>
+    <footer>
+        <p>&copy;&nbsp;2023&ndash;2024&nbsp;&nbsp;Martin Tábor</p>
+    </footer>
+    <a href="#" title="Nahoru" id="zpet_nahoru"><</a>
+</body>
+</html>

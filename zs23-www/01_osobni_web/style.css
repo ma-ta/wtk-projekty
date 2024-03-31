@@ -1,0 +1,843 @@
+/*
+    projekt:
+        SEMESTRÁLNÍ PRÁCE
+        Osobní webová prezentace
+
+    autor:
+        jméno     :  Martin TÁBOR
+        kontakt   :  st72836@student.upce.cz
+        škola     :  UPCE - FEI
+        obor      :  Webové technologie (Bc., komb.)
+
+    předmět:
+        název     :  World Wide Web (KWWW)
+        rok       :  ZS 2023/24
+        vyučující :  Ing. Lukáš ČEGAN, Ph.D.
+
+    soubor:
+        název     :  style.css
+        verze     :  2.0.0
+        datum     :  2024-02-10
+*/
+
+
+/* velký monitor */
+@media screen and (min-width: 900px) {
+
+    :root {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        /* KONSTANTY */
+        --barva-zvyrazneni: #997500;
+        --barva-pozadi-svetle: #fafafa;
+        --barva-pozadi-tmavsi: #f0f0f0;
+        --barva-ohraniceni: #999999;
+        --rohy-zakulaceni: 100px;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        padding: 50px 100px;
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000000;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: var(--barva-zvyrazneni);
+        transition: 0.5s;
+    }
+
+    li {
+        list-style: square;
+    }
+
+    ::selection {
+        background: var(--barva-zvyrazneni);
+        color: #FFFFFF;
+    }
+
+    img {
+        user-select: none;
+    }
+
+    header {
+        height: 300px;
+        border-bottom: 1px solid #999999;
+        margin-bottom: 60px;
+    }
+
+    #logo {
+        float: left;
+        height: 250px;
+        cursor: zoom-in;
+        background-color: transparent;
+    }
+
+    #titulek a {
+        text-decoration: none;
+    }
+
+    #titulek a:active strong {
+        transition-property: background-color;
+        background-color: #000000;
+    }
+
+    #hlavicka-vpravo {
+        text-align: center;
+        float: right;
+        width: calc(100% - 174px);
+    }
+
+    header h1 {
+        font-weight: normal;
+        font-size: 27pt;
+        margin-bottom: 5px;
+    }
+
+    header h2 {
+        font-weight: normal;
+        font-size: 11pt;
+        color: #777777;
+    }
+
+    nav {
+        margin: 50px auto;
+        padding: 0 25px; /* vyřešit pozadí u první a poslední položky */
+        text-align: center;
+        border: 1px var(--barva-ohraniceni) solid;
+        background-color: var(--barva-pozadi-svetle);
+        width: fit-content;
+        border-radius: var(--rohy-zakulaceni);
+    }
+
+    .nav-item-aktivni {
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    nav li {
+        list-style: none;
+        padding: 25px 25px;
+        display: inline-block;
+        width: 130px;
+    }
+
+    .nav-item-first {
+        border-top-left-radius: var(--rohy-zakulaceni);
+        border-bottom-left-radius: var(--rohy-zakulaceni);
+    }
+
+    .nav-item-last {
+        border-top-right-radius: var(--rohy-zakulaceni);
+        border-bottom-right-radius: var(--rohy-zakulaceni);
+    }
+
+    nav img {
+        display: block;
+        margin: 0 auto 10px auto;
+        height: 35px;
+    }
+
+    nav li:hover {
+        background-color: var(--barva-pozadi-tmavsi);
+        color: var(--barva-zvyrazneni);
+        transition: 0.5s;
+    }
+
+    nav li:active {
+        background-color: var(--barva-zvyrazneni);
+        color: white;
+    }
+
+    main {
+        clear: both;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: justify;
+        padding: 0px 30px 0px 30px;
+    }
+
+    main h1 {
+        font-size: 22px;
+        font-variant: small-caps;
+        margin-bottom: 20px;
+    }
+
+    main h2 {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    main p {
+        text-indent: 60px;
+    }
+
+    article img {
+        display: block;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    form fieldset {
+        padding: 50px;
+        background-color: var(--barva-pozadi-svetle);
+        border: 1px solid var(--barva-ohraniceni);
+        text-align: center;
+    }
+
+    form input, textarea {
+        text-align: center;
+        font-size: 12pt;
+        display: block;
+        padding: 30px 50px;
+        width: 75%;
+        max-width: 600px;
+        margin: 20px auto;
+        border-radius: var(--rohy-zakulaceni);
+        border: 1px solid var(--barva-ohraniceni);
+    }
+
+    form textarea {
+        resize: vertical;
+        min-height: 500px;
+        line-height: 20pt;
+        border-radius: 50px;
+        text-align: justify;
+    }
+
+    form input:focus, textarea:focus {
+        outline-color: var(--barva-zvyrazneni);
+    }
+
+    form button {
+        padding: 15px;
+        width: 150px;
+        text-align: center;
+        border: 1px solid var(--barva-ohraniceni);
+        background-color: #F6F6F6;
+        border-radius: var(--rohy-zakulaceni);
+    }
+
+    form button[type=submit] {
+        font-weight: bold;
+    }
+
+    form input[type=checkbox] {
+        width: 20px;
+        height: 20px;
+    }
+
+    form button:active {
+        background-color: var(--barva-zvyrazneni);
+        color: #FFFFFF;
+    }
+
+    footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        border-top: 1px var(--barva-ohraniceni) solid;
+        font-size: 14px;
+        text-align: right;
+        color: #777777;
+    }
+
+    #zpet_nahoru {
+        background-color: var(--barva-pozadi-svetle);
+        opacity: 0.5;
+        border: 1px solid var(--barva-ohraniceni);
+        color: var(--barva-ohraniceni);
+        cursor: grab;
+        font-size: 20pt;
+        border-radius: var(--rohy-zakulaceni);
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 5px;
+        right: 20px;
+        rotate: 90deg;
+        text-decoration: none;
+    }
+    #zpet_nahoru:hover {
+        background-color: var(--barva-pozadi-tmavsi);
+        color: #000;
+        opacity: 0.7;
+    }
+    #zpet_nahoru:active {
+        background-color: var(--barva-zvyrazneni);
+        border-color: var(--barva-zvyrazneni);
+        color: #FFFFFF;
+        opacity: 0.7;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+}
+
+
+/* úžší monitor - zúžené okraje */
+@media screen and (max-width: 899px) and (min-width: 720px) {
+
+    :root {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        /* KONSTANTY */
+        --barva-zvyrazneni: #997500;
+        --barva-pozadi-svetle: #fafafa;
+        --barva-pozadi-tmavsi: #f0f0f0;
+        --barva-ohraniceni: #999999;
+        --rohy-zakulaceni: 100px;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        padding: 50px 25px;
+        margin: auto;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000000;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: var(--barva-zvyrazneni);
+        transition: 0.5s;
+    }
+
+    li {
+        list-style: square;
+    }
+
+    ::selection {
+        background: var(--barva-zvyrazneni);
+        color: #FFFFFF;
+    }
+
+    img {
+        user-select: none;
+    }
+
+    header {
+        height: 300px;
+        border-bottom: 1px solid #999999;
+        margin-bottom: 60px;
+    }
+
+    #logo {
+        float: left;
+        height: 250px;
+        cursor: zoom-in;
+    }
+
+    #titulek a {
+        text-decoration: none;
+    }
+
+    #titulek a:active strong {
+        transition-property: background-color;
+        background-color: #000000;
+    }
+
+    #hlavicka-vpravo {
+        text-align: center;
+        float: right;
+        width: calc(100% - 174px);
+    }
+
+    header h1 {
+        font-weight: normal;
+        font-size: 27pt;
+        margin-bottom: 5px;
+    }
+
+    header h2 {
+        font-weight: normal;
+        font-size: 11pt;
+        color: #777777;
+    }
+
+    nav {
+        margin: 50px auto;
+        padding: 0 25px; /* vyřešit pozadí u první a poslední položky */
+        text-align: center;
+        border: 1px var(--barva-ohraniceni) solid;
+        background-color: var(--barva-pozadi-svetle);
+        width: fit-content;
+        border-radius: var(--rohy-zakulaceni);
+    }
+
+    .nav-item-aktivni {
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    nav li {
+        list-style: none;
+        padding: 25px 25px;
+        display: inline-block;
+        width: 130px;
+    }
+
+    .nav-item-first {
+        border-top-left-radius: var(--rohy-zakulaceni);
+        border-bottom-left-radius: var(--rohy-zakulaceni);
+    }
+
+    .nav-item-last {
+        border-top-right-radius: var(--rohy-zakulaceni);
+        border-bottom-right-radius: var(--rohy-zakulaceni);
+    }
+
+    nav img {
+        display: block;
+        margin: 0 auto 10px auto;
+        height: 35px;
+    }
+
+    nav li:hover {
+        background-color: #f0f0f0;
+        color: var(--barva-zvyrazneni);
+        transition: 0.5s;
+    }
+
+    nav li:active {
+        background-color: var(--barva-zvyrazneni);
+        color: white;
+    }
+
+    main {
+        clear: both;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: justify;
+        padding: 0px 30px 0px 30px;
+    }
+
+    main h1 {
+        font-size: 22px;
+        font-variant: small-caps;
+        margin-bottom: 20px;
+    }
+
+    main h2 {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    main p {
+        text-indent: 60px;
+    }
+
+    article img {
+        display: block;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    form fieldset {
+        padding: 50px;
+        background-color: var(--barva-pozadi-svetle);
+        border: 1px solid var(--barva-ohraniceni);
+        text-align: center;
+    }
+
+    form input, textarea {
+        text-align: center;
+        font-size: 12pt;
+        display: block;
+        padding: 30px 50px;
+        width: 85%;
+        max-width: 600px;
+        margin: 20px auto;
+        border-radius: var(--rohy-zakulaceni);
+        border: 1px solid var(--barva-ohraniceni);
+    }
+
+    form textarea {
+        resize: vertical;
+        min-height: 500px;
+        line-height: 20pt;
+        border-radius: 50px;
+        text-align: justify;
+    }
+
+    form input:focus, textarea:focus {
+        outline-color: var(--barva-zvyrazneni);
+    }
+
+    form button {
+        padding: 15px;
+        width: 150px;
+        text-align: center;
+        border: 1px solid var(--barva-ohraniceni);
+        background-color: #F6F6F6;
+        border-radius: var(--rohy-zakulaceni);
+    }
+
+    form button[type=submit] {
+        font-weight: bold;
+    }
+
+    form input[type=checkbox] {
+        width: 20px;
+        height: 20px;
+    }
+
+    form button:active {
+        background-color: var(--barva-zvyrazneni);
+        color: #FFFFFF;
+    }
+
+    footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        border-top: 1px var(--barva-ohraniceni) solid;
+        font-size: 14px;
+        text-align: right;
+        color: #777777;
+    }
+
+    #zpet_nahoru {
+        background-color: var(--barva-pozadi-svetle);
+        opacity: 0.5;
+        border: 1px solid var(--barva-ohraniceni);
+        color: var(--barva-ohraniceni);
+        cursor: grab;
+        font-size: 20pt;
+        border-radius: var(--rohy-zakulaceni);
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 5px;
+        right: 20px;
+        rotate: 90deg;
+        text-decoration: none;
+    }
+    #zpet_nahoru:hover {
+        background-color: var(--barva-pozadi-tmavsi);
+        color: #000;
+        opacity: 0.7;
+    }
+    #zpet_nahoru:active {
+        background-color: var(--barva-zvyrazneni);
+        border-color: var(--barva-zvyrazneni);
+        opacity: 0.7;
+        color: #FFFFFF;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+}
+
+
+/* malé obrazovky - úsporné hlavní menu */
+@media screen and (max-width: 719px) {
+
+    :root {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        /* KONSTANTY */
+        --barva-zvyrazneni: #997500;
+        --barva-pozadi-svetle: #fafafa;
+        --barva-pozadi-tmavsi: #f0f0f0;
+        --barva-ohraniceni: #999999;
+        --rohy-zakulaceni: 100px;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        padding: 50px 25px;
+        margin: auto;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000000;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: var(--barva-zvyrazneni);
+        transition: 0.5s;
+    }
+
+    li {
+        list-style: square;
+    }
+
+    ::selection {
+        background: var(--barva-zvyrazneni);
+        color: #FFFFFF;
+    }
+
+    img {
+        user-select: none;
+    }
+
+    header {
+        border-bottom: 1px solid #999999;
+        margin-bottom: 60px;
+    }
+
+    #logo {
+        display: block;
+        margin: auto;
+        margin-bottom: 25px;
+        height: 100px;
+        cursor: zoom-in;
+    }
+
+    #titulek a {
+        text-decoration: none;
+    }
+
+    #titulek a:active strong {
+        transition-property: background-color;
+        background-color: #000000;
+    }
+
+    #hlavicka-vpravo {
+        margin: auto;
+        text-align: center;
+    }
+
+    header h1 {
+        font-weight: normal;
+        font-size: 27pt;
+        margin-bottom: 5px;
+    }
+
+    header h2 {
+        font-weight: normal;
+        font-size: 11pt;
+        color: #777777;
+    }
+
+    nav {
+        margin: 50px auto;
+        padding: 0 15px; /* vyřešit pozadí u první a poslední položky */
+        text-align: center;
+        border: 1px var(--barva-ohraniceni) solid;
+        background-color: var(--barva-pozadi-svetle);
+        width: fit-content;
+        border-radius: var(--rohy-zakulaceni);
+    }
+
+    .nav-item-aktivni {
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    nav li {
+        list-style: none;
+        padding: 15px 15px;
+        display: inline-block;
+    }
+
+    nav img {
+        display: block;
+        margin: 0 auto 10px auto;
+        height: 25px;
+    }
+
+    nav li:hover {
+        background-color: #f0f0f0;
+        color: var(--barva-zvyrazneni);
+        transition: 0.5s;
+        border-radius: 50px;
+    }
+
+    nav li:active {
+        background-color: var(--barva-zvyrazneni);
+        color: white;
+    }
+
+    main {
+        clear: both;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: justify;
+        padding: 0px 30px 0px 30px;
+    }
+
+    main h1 {
+        font-size: 22px;
+        font-variant: small-caps;
+        margin-bottom: 20px;
+    }
+
+    main h2 {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    main p {
+        text-indent: 60px;
+    }
+
+    article img {
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    form fieldset {
+        padding: 50px;
+        background-color: var(--barva-pozadi-svetle);
+        border: 1px solid var(--barva-ohraniceni);
+        text-align: center;
+    }
+
+    form input, textarea {
+        text-align: center;
+        font-size: 12pt;
+        width: 100%;
+        display: block;
+        padding: 30px 50px;
+        max-width: 600px;
+        margin: 20px auto;
+        border-radius: var(--rohy-zakulaceni);
+        border: 1px solid var(--barva-ohraniceni);
+    }
+
+    form textarea {
+        resize: vertical;
+        min-height: 500px;
+        line-height: 20pt;
+        border-radius: 50px;
+        text-align: justify;
+    }
+
+    form input:focus, textarea:focus {
+        outline-color: var(--barva-zvyrazneni);
+    }
+
+    form button {
+        padding: 15px;
+        width: 150px;
+        text-align: center;
+        border: 1px solid var(--barva-ohraniceni);
+        background-color: #F6F6F6;
+        border-radius: var(--rohy-zakulaceni);
+        display: block;
+        margin: 10px auto;
+    }
+
+    form button[type=submit] {
+        font-weight: bold;
+    }
+
+    form input[type=checkbox] {
+        width: 20px;
+        height: 20px;
+    }
+
+    form button:active {
+        background-color: var(--barva-zvyrazneni);
+        color: #FFFFFF;
+    }
+
+    footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        border-top: 1px var(--barva-ohraniceni) solid;
+        font-size: 14px;
+        text-align: right;
+        color: #777777;
+    }
+
+    #zpet_nahoru {
+        background-color: var(--barva-pozadi-svetle);
+        opacity: 0.5;
+        border: 1px solid var(--barva-ohraniceni);
+        color: var(--barva-ohraniceni);
+        cursor: grab;
+        font-size: 20pt;
+        border-radius: var(--rohy-zakulaceni);
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 5px;
+        right: 20px;
+        rotate: 90deg;
+        text-decoration: none;
+    }
+    #zpet_nahoru:hover {
+        background-color: var(--barva-pozadi-tmavsi);
+        opacity: 0.7;
+        color: #000;
+    }
+    #zpet_nahoru:active {
+        background-color: var(--barva-zvyrazneni);
+        border-color: var(--barva-zvyrazneni);
+        opacity: 0.7;
+        color: #FFFFFF;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+}
