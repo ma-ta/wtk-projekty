@@ -58,6 +58,14 @@ Projekt by měl být rozdělen na čtyři základní komponenty (položky implem
    - web/backend (server enginu, DB&hellip; <-> frontend | online) &ndash; *zřejmě Java*
    - web/frontend (komunikace s backendem | online)
 
+#### Rozsah
+
+V [zadání Ročníkového projektu I.](https://github.com/ma-ta/wtk-projekty/blob/main/ls23-rpw1/zadani_moodle.md) je uvedeno, že výstupem má být plně funkční webová aplikace &ndash; z toho důvodu navrhuji redukci např. na webový front end s hrací plochou piškvorek a příslušnými základními ovládacími prvky.
+
+Dosavadní rozsah technických znalostí z absolvovaných předmětů jako *World Wide Web* a *Programování a algoritmizace* by měl dostačovat k vytvoření layoutu webové stránky a implementaci jednoduché client-side logiky v JS (např. herní &bdquo;AI&ldquo; založené na náhodných tazích, ověřování přípustnosti tahu a vyhodnocování stavu hry).
+
+V dalších semestrech by měly být využity některé komponenty, architektura předělána do MVC, web propojen s back endem a logika přesunuta na server herních enginů, s nímž bude back end webové stránky komunikovat.
+
 ## Důvod volby tématu
 
 Projekt zahrnuje oblasti z mnoha profilujících předmětů studijního oboru Webové technologie a vhodně je propojuje do uceleného aplikovaného řešení (produktu):
