@@ -1,0 +1,111 @@
+body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-family: 'Roboto Slab', Georgia, serif;
+    overflow-y: scroll;
+    background-color: #f3f3f3;
+}
+#stav {
+    margin-top: -24px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    opacity: 0.9;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    opacity: 0.8;
+}
+#stav p {
+    margin: 0;
+    padding: 0;
+}
+h2, h3, h4 {
+    color: #194166;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+#registrace .poznamka {
+    color: #8d0010 !important;
+    font-weight: bold;
+}
+
+.header,
+.marketing,
+.footer {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+ul li, ol li {
+    margin-bottom: 5px;
+}
+
+.header {
+    padding-bottom: 1rem;
+    border-bottom: .05rem solid #ffffff;
+}
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 3rem;
+}
+
+.footer {
+    padding-top: 1.5rem;
+    border-top: .05rem solid #ffffff;
+}
+
+.jumbotron {
+    opacity: 0.9;
+    border-radius: 0.5rem;
+}
+
+
+@media (min-width: 48em) {
+    .container {
+        max-width: 46rem;
+    }
+}
+.container-narrow > hr {
+    margin: 2rem 0;
+}
+
+.jumbotron {
+    text-align: center;
+    border-bottom: .05rem solid #ffffff;
+}
+.jumbotron h1 {
+    font-size: 45px;
+}
+.jumbotron .btn {
+    padding: .75rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+.marketing {
+    margin: 3rem 0;
+}
+.marketing p + h4 {
+    margin-top: 1.5rem;
+}
+
+
+@media screen and (min-width: 48em) {
+    .header,
+    .marketing,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .header {
+        margin-bottom: 2rem;
+    }
+    .jumbotron {
+        border-bottom: 0;
+    }
+    .jumbotron h1 {
+        font-size: 72px;
+    }
+}
