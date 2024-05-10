@@ -14,8 +14,8 @@ Stanoven individuálně po konzultaci v garantem předmětu.
 
 (vše zveřejněno garantovi předmětu na github.com)
 
-- [ ] SRS (software requirements specification)
-- [ ] zdrojové kódy aplikace
+- [x] SRS (software requirements specification)
+- [x] zdrojové kódy aplikace
 - [ ] uživatelská a administrátorská příručka
 - [ ] produktový list A4
 
