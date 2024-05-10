@@ -2,9 +2,6 @@
 
 > Microsite s formulářem, databází s registrem zájemců a automaticky generovaným e-mailem
 
-Screenshoty ve složce [__/res/screenshots__](/res/screenshots).
-![Screenshot formuláře](/res/screenshots/reg-form.png)
-
 ### Požadavky (testovaná konfigurace)
 
 #### Server (backend)
