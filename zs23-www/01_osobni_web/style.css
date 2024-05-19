@@ -185,11 +185,17 @@
         font-weight: bold;
         font-size: 16px;
         text-align: center;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 
     main p {
         text-indent: 60px;
+    }
+
+    main p.stred {
+        text-align: center;
+        text-indent: 0;
     }
 
     article img {
@@ -461,11 +467,17 @@
         font-weight: bold;
         font-size: 16px;
         text-align: center;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 
     main p {
         text-indent: 60px;
+    }
+
+    main p.stred {
+        text-align: center;
+        text-indent: 0;
     }
 
     article img {
@@ -727,11 +739,17 @@
         font-weight: bold;
         font-size: 16px;
         text-align: center;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 
     main p {
         text-indent: 60px;
+    }
+
+    main p.stred {
+        text-align: center;
+        text-indent: 0;
     }
 
     article img {
