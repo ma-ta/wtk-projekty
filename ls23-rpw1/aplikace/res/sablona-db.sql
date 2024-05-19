@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
 --
 -- Počítač: 127.0.0.1
--- Vytvořeno: Pát 22. led 2016, 22:14
--- Verze serveru: 10.1.9-MariaDB
--- Verze PHP: 7.0.1
+-- Vytvořeno: Pát 10. kvě 2024, 08:00
+-- Verze serveru: 10.4.32-MariaDB
+-- Verze PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Databáze: `hrad`
+-- Databáze: `rpw`
 --
 
 -- --------------------------------------------------------
@@ -28,13 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `navstevnici` (
   `id` int(11) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
   `referer` varchar(1000) NOT NULL,
   `ip` varchar(50) NOT NULL,
   `os` varchar(50) NOT NULL,
   `browser` varchar(50) NOT NULL,
   `useragent` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -44,7 +45,7 @@ CREATE TABLE `navstevnici` (
 
 CREATE TABLE `zajemci` (
   `ID` int(11) NOT NULL,
-  `registrace` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `registrace` timestamp NOT NULL DEFAULT current_timestamp(),
   `jmeno` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `telefon` varchar(18) NOT NULL,
@@ -52,27 +53,27 @@ CREATE TABLE `zajemci` (
   `castka` int(11) NOT NULL,
   `zprava` text NOT NULL,
   `domena` varchar(200) NOT NULL,
-  `souhlas` tinyint(1) NOT NULL DEFAULT '1',
+  `souhlas` tinyint(1) NOT NULL DEFAULT 1,
   `referer` varchar(1000) NOT NULL,
   `ip` varchar(50) NOT NULL,
   `os` varchar(50) NOT NULL,
   `browser` varchar(50) NOT NULL,
   `useragent` varchar(200) NOT NULL,
   `heslo` char(64) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=COMPACT;
 
 --
--- Klíče pro exportované tabulky
+-- Indexy pro exportované tabulky
 --
 
 --
--- Klíče pro tabulku `navstevnici`
+-- Indexy pro tabulku `navstevnici`
 --
 ALTER TABLE `navstevnici`
   ADD PRIMARY KEY (`id`);
 
 --
--- Klíče pro tabulku `zajemci`
+-- Indexy pro tabulku `zajemci`
 --
 ALTER TABLE `zajemci`
   ADD PRIMARY KEY (`ID`);
@@ -86,11 +87,14 @@ ALTER TABLE `zajemci`
 --
 ALTER TABLE `navstevnici`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT pro tabulku `zajemci`
 --
 ALTER TABLE `zajemci`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
