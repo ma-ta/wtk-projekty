@@ -51,6 +51,7 @@ include("onload.php");
             </div>
             <footer class="footer" style="color: #194166; text-align: center;">
                 <p><?php echo(COPYRIGHT); ?></p>
+                <p><a href="./admin" target="_blank" title="Přihlásit do administrace">Přihlásit</a></p>
             </footer>
 
         </div> <!-- /container -->

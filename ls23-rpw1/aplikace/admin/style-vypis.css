@@ -23,9 +23,6 @@ textarea {
 table {
     margin: 0;
 }
-table #td11, #td12 {
-    display: none;
-}
 caption {
     text-align: left;
     font-weight: bold;

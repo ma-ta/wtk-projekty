@@ -16,11 +16,11 @@ if (isset($_SESSION["jablko"])) {
     else
         $_SESSION["referer"] = "";
     // zaznamenání první návštěvy
-    $sql_dotaz = "INSERT INTO navstevnici (referer, ip, os, browser, useragent) "
-            . "VALUES (:referer, :ip, :os, :browser, :useragent)";
+    $sql_dotaz = "INSERT INTO navstevnici (ip, os, browser, useragent) "
+            . "VALUES (:ip, :os, :browser, :useragent)";
     $sql_vysledek = $db->prepare($sql_dotaz);
     $navstevnik = navstevnik(); // array(os, browser, user-agent)
-    $sql_vysledek->execute(array(":referer" => $_SESSION["referer"], ":ip" => zjistiIP(), 
+    $sql_vysledek->execute(array(":ip" => zjistiIP(), 
         ":os" => $navstevnik[0], ":browser" => $navstevnik[1], ":useragent" => $navstevnik[2]));
 }
 
@@ -85,14 +85,24 @@ if (isset($_POST["potvrdit"])) {
                 exit;
             }
 
-            $sql_dotaz = "INSERT INTO zajemci (jmeno, email, telefon, profil, heslo, castka, zprava, domena, souhlas, ip, referer, os, browser, useragent) 
-                VALUES (:jmeno, :email, :telefon, :profil, :heslo, :castka, :zprava, :domena, :souhlas, :ip, :referer, :os, :browser, :useragent)";
+            $sql_dotaz = "INSERT INTO zajemci (jmeno, email, telefon, profil, heslo, castka, zprava, domena, ip, os, browser, useragent) 
+                VALUES (:jmeno, :email, :telefon, :profil, :heslo, :castka, :zprava, :domena, :ip, :os, :browser, :useragent)";
 
             $sql_vysledek = $db->prepare($sql_dotaz);
             $navstevnik = navstevnik();
-            $sql_vysledek->execute(array(":jmeno" => $jmeno, ":email" => $email, ":telefon" => $telefon, ":profil" => $profil, ":heslo" => $hashHesla,
-                ":castka" => $castka, ":zprava" => $zprava, ":domena" => DOMENA, ":souhlas" => $souhlas, ":ip" => $ip, ":referer" => $_SESSION["referer"],
-                    ":os" => $navstevnik[0], ":browser" => $navstevnik[1], ":useragent" => $navstevnik[2]));
+            $sql_vysledek->execute(array(
+                ":jmeno" => $jmeno,
+                ":email" => $email,
+                ":telefon" => $telefon,
+                ":profil" => $profil,
+                ":heslo" => $hashHesla,
+                ":castka" => $castka,
+                ":zprava" => $zprava,
+                ":domena" => DOMENA,
+                ":ip" => $ip,
+                ":os" => $navstevnik[0],
+                ":browser" => $navstevnik[1],
+                ":useragent" => $navstevnik[2]));
 
             posli_potvrzeni($jmeno, $email, $telefon, $profil, $heslo, $castka, $zprava);
             echo("<div id='stav' style='color: #449d44; background-color: #DDFFDD'><p><strong>HOTOVO</strong>

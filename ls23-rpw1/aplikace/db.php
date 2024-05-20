@@ -4,7 +4,7 @@
 $db_host = "localhost";
 $db_jmeno = "root";
 $db_heslo = "";
-$db_databaze = "webprojekt";
+$db_databaze = "rpw";
 
 // PDO(mysql:host=localhost;dbname=test;charset=utf8", $user, $pass)
 try {
