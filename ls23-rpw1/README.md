@@ -1,25 +1,26 @@
-# Ročníkový projekt I. (KRPW1)
+# Ročníkový projekt I.
 
-> Microsite s formulářem, databází s registrem zájemců a automaticky generovaným e-mailem
+> vyučující: Ing. Lukáš Čegan, Ph.D.
 
-### Požadavky (testovaná konfigurace)
+Cílem předmětu je samostatné ~~nebo týmové~~ vypracování ročníkového projektu, při jehož zpracování si studenti prakticky osvojují technologický rámec vyučovaný v daném ročníku studia. Výsledkem ročníkového projektu je webová aplikace na zadané téma. V rámci procesu zpracování ročníkového projektu studenti řeší s vyučujícím v semináři dílčí odborná témata vycházející z konkrétního zadání.
 
-#### Server (backend)
- - Apache HTTP Server 2.4.59,
- - PHP 8.3.7,
- - MariaDB 10.11.6.
+## Výstup projektu:
+Plně funkční aplikace dle vlastního zadání, navržené zadání je nutné odsouhlasit garantem předmětu.
 
-#### Browser (frontend)
-- Google Chrome 125,
-- Microsoft Edge 125,
-- Mozilla Firefox 126.
+## Rozsah zpracování aplikace:
+Stanoven individuálně po konzultaci v garantem předmětu.
 
-### Použité knihovny (závislosti)
-- Bootstrap 5.3.3
-- jQuery 3.7.1
+## Povinné součásti výstupu projektu:
 
-### Nasazení aplikace
-1. Importujte soubor __/k projektu/databaze.sql__ (obsahuje připravené tabulky) do své databáze,
-2. editujte __db.php__ dle nastavení konkrétního serveru,
-3. v souboru __config.php__ upravte konstanty s názvem stránek, domény, e-mail a copyright (zápatí),
-4. jakmile stránky zpřístupníte na localhostu, můžete zkusit experimentovat &ndash; editovat text, vyměnit pozadí etc.
+(vše zveřejněno garantovi předmětu na github.com)
+
+- [x] SRS (software requirements specification)
+- [x] zdrojové kódy aplikace
+- [x] uživatelská a administrátorská příručka
+- [ ] produktový list A4
+
+## Prezentace aplikace:
+Možné až po odevzdání všech povinných součástí projektu na seminářích ve dnech: 3. 5. 2024 a 10. 5. 2024 (další termíny budou zveřejněny ve STAGu v souladu se Studijním a zkušebním řádem UPCE).
+
+## Zápočet:
+Zápočet budě udělen po úspěšné prezentaci výstupu projektu a vypořádání všech připomínek garanta předmětu.
