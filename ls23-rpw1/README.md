@@ -17,7 +17,7 @@ Stanoven individuálně po konzultaci v garantem předmětu.
 - [x] SRS (software requirements specification)&nbsp;&ndash;&nbsp;[zde](SRS.pdf)
 - [x] zdrojové kódy aplikace&nbsp;&ndash;&nbsp;[zde](aplikace)
 - [x] uživatelská a administrátorská příručka&nbsp;&ndash;&nbsp;[zde](User_guide.pdf)
-- [x] produktový list A4
+- [x] produktový list A4&nbsp;&ndash;&nbsp;[zde](Promo.pdf)
 
 ## Prezentace aplikace:
 Možné až po odevzdání všech povinných součástí projektu na seminářích ve dnech: 3. 5. 2024 a 10. 5. 2024 (další termíny budou zveřejněny ve STAGu v souladu se Studijním a zkušebním řádem UPCE).
