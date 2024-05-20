@@ -5,14 +5,14 @@
 ### Požadavky (testovaná konfigurace)
 
 #### Server (backend)
- - Apache HTTP Server 2.4.58,
- - PHP 8.2.12,
- - MariaDB 10.4.32.
+ - Apache HTTP Server 2.4.59,
+ - PHP 8.3.7,
+ - MariaDB 10.11.6.
 
 #### Browser (frontend)
-- Google Chrome 124,
-- Microsoft Edge 124,
-- Mozilla Firefox 125.
+- Google Chrome 125,
+- Microsoft Edge 125,
+- Mozilla Firefox 126.
 
 ### Použité knihovny (závislosti)
 - Bootstrap 5.3.3
