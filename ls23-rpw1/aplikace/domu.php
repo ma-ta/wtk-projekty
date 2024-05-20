@@ -1,7 +1,8 @@
 <?php include("funkce.php"); ?>
 
 <div class="jumbotron">
-    
+    <img src="res/logo.svg" alt="logo">
+    <p>&nbsp;</p>
     <h1 class="display-3" style="color: #194166;">Tato doména<br><span style="color: #8d0010;">je registrovaná</span></h1>
     <br />
     <p class="lead" style="color: #000;">Právě jste navštívili doménu <strong><?php echo(DOMENA); ?></strong>,<br>která již má svého majitele.<br />

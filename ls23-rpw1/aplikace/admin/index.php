@@ -52,6 +52,7 @@ if((isset($_SESSION["prihlasen"])) && ($_SESSION["prihlasen"] == true)) {
 </head>
 <body>
     <div id="obsah">
+        <img src="../res/logo.svg" alt="logo">
         <h1>Přihlášení</h1>
         <?php
         if(!isset($_SESSION["prihlasen"])) {
