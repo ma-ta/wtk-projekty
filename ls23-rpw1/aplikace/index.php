@@ -16,6 +16,8 @@ include("onload.php");
         <link rel="stylesheet" href="style.css" />
         <!-- licence: Apache License, Version 2.0 | https://fonts.google.com/specimen/Roboto+Slab/about?query=roboto+slab -->
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+        <link rel="icon" type="image/x-icon" href="res/logo.svg">
+
 
         <!-- skripty -->
         <script src="libs/jquery-3.7.1.min.js"></script>

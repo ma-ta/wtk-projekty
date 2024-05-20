@@ -49,6 +49,7 @@ if((isset($_SESSION["prihlasen"])) && ($_SESSION["prihlasen"] == true)) {
     <meta charset="utf-8" />
     <title>Výpis databáze zájemců</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="../res/logo.svg">
 </head>
 <body>
     <div id="obsah">

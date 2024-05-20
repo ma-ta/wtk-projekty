@@ -7,6 +7,7 @@
     <!-- licence: Apache License, Version 2.0 | https://fonts.google.com/specimen/Roboto+Slab/about?query=roboto+slab -->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="style-vypis.css" />
+    <link rel="icon" type="image/x-icon" href="../res/logo.svg">
     <title>Výpis databáze zájemců</title>
 </head>
 <body>
