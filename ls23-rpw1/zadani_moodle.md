@@ -16,7 +16,7 @@ Stanoven individuálně po konzultaci v garantem předmětu.
 
 - [x] SRS (software requirements specification)
 - [x] zdrojové kódy aplikace
-- [ ] uživatelská a administrátorská příručka
+- [x] uživatelská a administrátorská příručka
 - [ ] produktový list A4
 
 ## Prezentace aplikace:
