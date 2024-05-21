@@ -1,10 +1,18 @@
 <?php
-// konfigurace
-define("ADRESA_WEBU", "//localhost/webprojekt");
-define("JMENO_AUTORA", "Martin TÁBOR");
-define("DOMENA", "DrahaDomena.com");
-define("ADRESA_MAILU", "tym@" . strtolower(DOMENA));
-define("NADPIS", DOMENA);
-define("NAZEV_STRANKY", DOMENA);
-define("COPYRIGHT", "&copy&nbsp;" . strftime("%Y", Time()) . "&nbsp;&nbsp;" . JMENO_AUTORA . "<br />" . NAZEV_STRANKY);
+
+/*************************/
+/* K O N F I G U R A C E */
+/*************************/
+
+define("ADRESA_WEBU",   "//localhost/webprojekt");     // url adresa stránek
+define("JMENO_AUTORA",  "Martin TÁBOR");               // jméno provozovatele stránek (resp. vlatníka) v patičce webu
+define("DOMENA",        "DrahaDomena.com");            // zobrazovaný název domény (k prodeji)
+define("ADRESA_MAILU",  "tym@" . strtolower(DOMENA));  // zobrazovaná e-mailová kontaktní adresa provozovatele (majitele)
+define("NADPIS",        DOMENA);                       // nadpis home page
+define("NAZEV_STRANKY", DOMENA);                       // title v hlavičce stránky
+// copyrithg v patičce webu
+define("COPYRIGHT",     "&copy&nbsp;" . strftime("%Y", Time()) . "&nbsp;&nbsp;" . JMENO_AUTORA . "<br />" . NAZEV_STRANKY);
+
+/*************************/
+
 ?>
