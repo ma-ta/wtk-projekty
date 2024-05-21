@@ -1,0 +1,41 @@
+        +-----------------------------------------------------+
+        |                                                     |
+        |         Ma-TA {}       H R A                        |
+        |            games            S I _ E _ I C E         |
+        |                                                     |
+        +--------------------------+--------------------------+
+        |    (c) 2024  Freeware    |          v1.0.0          |
+        +--------------------------+--------------------------+
+
+                             V i t e j t e
+
+
+Aktualni  slozka  obsahuje  spustitelne  soubory hry. Podslozka DATA je
+nezbytna pro spravny beh aplikace a pro ukladani hernich statistik.
+
+Ke  spusteni  tedy staci "poklikat" na binarni soubor odpovidajici vasi
+platforme.  Paklize nezasahne napr. antivirova ochrana, hra se nasledne
+otevre v okne prikazoveho radku (terminalu).
+
+V  soucasne  dobe hra nepodporuje ceskou diakritiku a hadana slova jsou
+tedy zobrazena bez hacku a carek!
+
+
+Obsah aktualni slozky:
+
+./
+ info.txt             - (tento) soubor s rychlymi instrukcemi  (textovy)
+ napoveda.txt         - kompletni napoveda ke hre              (textovy)
+ sibenice_linux64     - platforma GNU/Linux (64-bit, x86-64)   (program)
+ sibenice_win64.exe   - platforma Windows   (64-bit, x86-64)   (program)
+ sibenice_win32.exe   - platforma Windows   (32-bit, x86)      (program)
+ SIBE_DOS.EXE         - platforma DOS                          (binarni)
+ CWSDPMI.EXE          - soubor nezbytny pro beh v MS-DOS       (binarni)
+
+DATA/
+ (stats.sav)          - soubor s ulozenymi statistikami        (binarni)
+                        (vytvoren az po prvnim spusteni hry)
+ game_cs.dat          - slovnik 1000 nahodnych ceskych slov    (textovy)
+ game.dat             - zdrojovy soubor ascii-artu sibenice    (textovy)
+ help.dat             - zdrojovy soubor napovedy pro aplikaci  (textovy)
+ stats.dat            - zdrojovy soubor obrazovky statistik    (textovy)

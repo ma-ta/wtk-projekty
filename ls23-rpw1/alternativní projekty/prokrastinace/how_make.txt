@@ -1,0 +1,89 @@
++-----------------------------------------------------+
+|                                                     |
+|         Ma-TA {}       H R A                        |
+|            games            S I _ E _ I C E         |
+|                                                     |
++--------------------------+--------------------------+
+|    (c) 2024  Freeware    |          v1.0.0          |
++--------------------------+--------------------------+
+
++-----------------------------------------------------+
+|           KOMPILACE ZE ZDROJOVYCH SOUBORU           |
++-----------------------------------------------------+
+
+
++-----+
+|  1  |  GNU/LINUX (UN*X) :
++-----+
+
+
+  Spustit skript make.sh
+
+  Prerekvizity:
+    Nastroje pro kompilaci zdrojovych kodu v C
+    (typicky GNU GCC nebo LLVM/Clang).
+
+  Poznamky:
+    - ohlidat ukoncovani radku v make.sh (nastavit na LF)
+    - predem instalovat vyvojove nastroje:
+      - Ubuntu 24.04 (LTS) -> [sudo apt install build-essentials -y]
+      - Fedora 40          -> [sudo dnf install gcc -y]
+      - FreeBSD 14         -> [pkg install -y bash && bash]
+    - spustit [sh make.sh]
+
+
++-----+
+|  2  |  WINDOWS 10/11 :
++-----+
+
+
+  Spustit skript make_win.bat z vyvojarske konzole
+
+  Prerekvizity:
+    Vyvojovy nastroj Microsoft Visual Studio, resp. MSVC.
+
+  Poznamky:
+    - predem instalovat vyvojove nastroje:
+      - Visual Studio Community s podporou vyvoje pro C/C++
+         (tj. minimalne kompilator MSVC)
+      - skript je treba spustit z vyvojarske konzole
+         v nabidce Start:
+           x86 Native Tools Command Prompt for VS (32bitova sibenice)
+           x64 Native Tools Command Prompt for VS (64bitova sibenice)
+    - dle zkusenosti dela problemy vestaveny antivirus Zabezpečení Windows
+      (tj. po vlastnim zvazeni, prip. kontrole zdrojovych kodu, pridat
+      vyjimku nebo docasne vypnout antivirovou ochranu v realnem case)
+
+
++-----+
+|  3  |  DOS (FreeDOS):
++-----+
+
+
+  Spustit skript make_dos.bat
+
+  a) vytvorit a pripojit ISO se zdrojovymi soubory k virtualnimu PC,
+  b) zkopirovat soubory z ISO na HDD napr. prikazem [xcopy D: C:\sibenice /S],
+  c) vstoupit do slozky [cd C:\sibenice] a spustit [make_dos.bat].
+
+  Prerekvizity:
+    Idealne virtualni PC s FreeDOS.
+    V systemu FreeDOS 1.3 nainstalovat DJGPP pomoci nastroje [FDIMPLES]
+    (je treba stahnout a napr. do virtualni mechaniky vlozit i disk BonusCD).
+    V jinych systemech (napr. i Windows 95/98) je mozne stahnout DJGPP
+    ze stranek projektu [https://www.delorie.com/djgpp/].
+
+  Poznamky:
+    - po nainstalovani DJGPP pres [FDIMPLES] je treba pridat nasledujici radky
+      do C:\FDAUTO.BAT (napr. prikazem [edit fdauto.bat]):
+
+        set DJGPP=C:\DEVEL\DJGPP\DJGPP.ENV
+        set DJGPP=C:\DEVEL\DJGPP\BIN;%PATH%
+
+      a provest [shutdown]. Po restartu by jiz mel prekladac fungovat [gcc --version]
+    - pro spusteni vytvorene binarky v MS-DOS je nutne umistit soubor [CWSDPMI.EXE]
+      do stejne slozky, jako spustitelny soubor hry [sibe_dos.exe]
+      -> [https://en.wikipedia.org/wiki/CWSDPMI]
+      -> [https://sandmann.dotster.com/cwsdpmi/]
+    - u DOSu je treba hlidat tez konvenci max. 8 znaku pro nazvy souboru (FAT16)
+

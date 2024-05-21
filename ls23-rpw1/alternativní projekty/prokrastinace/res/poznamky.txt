@@ -1,0 +1,41 @@
+------------
+ZNÁMÉ CHYBY:
+------------
+
+1) není zajištěno, aby se v rámci kola/hry nemohla opakovat slova
+   (leč pseudonáhodná čísla jsou generována v rovnoměrném rozložení)
+
+2) není zajištěno, aby se v rámci kola nemohly ihned za sebou
+   opakovat stejné hlášky o výsledku tahu
+   (tzn. vyloučit poslední položku nebo změnit na carousel)
+
+3) při zadávání jména do kroniky může způsobit problémy, když uživatel
+   použije jiné znaky než ASCII (chybné zarovnání na obr. statistik)
+
+
+----------------------
+NÁPADY NA DALŠÍ VÝVOJ:
+----------------------
+
+1) vylepšit odkrývání spřežek/skupin znaků (české písmeno 'CH' apod.)
+   (definice znaků budou např. součástí slovníků pro jednotlivé jazyky)
+
+2) nová zvláštní volba při probíhající hře
+   [2] - doplní chybějící písmeno za cenu určitého počtu bodů
+         dle aktuální situace:
+         a) nejpočetněji zastoupené chybějící písmeno (první zleva)
+         b) první chybějící písmeno zleva
+
+3) možnost volby různých kategorií hádaných slov / vícejazyčná verze
+
+4) začlenění knihovny getch - program bude reagovat přímo na stisk kláves
+   (písmen) bez nutnosti potvrzování přes Enter
+
+5) možnost hrát ve dvou (příp. i více) lidech
+   - bude se přepínat mezi jednotlivými účastníky
+   - zvítězí ten, kdo vydrží nejdéle
+   - v případě remízy při dosažení max. počtu kol hráč s nejvyšším skóre
+
+6) přidání diakritiky
+
+7) distribuce hry v linuxových repozitářích, MS Store, FreeDOS apod.
