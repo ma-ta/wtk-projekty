@@ -1,3 +1,5 @@
+Rozpracované projekty:&nbsp;[alternativy](alternativy)
+
 # Ročníkový projekt I.
 
 > vyučující: Ing. Lukáš Čegan, Ph.D.
