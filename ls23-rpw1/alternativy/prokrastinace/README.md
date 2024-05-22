@@ -3,8 +3,9 @@
 *Původním záměrem bylo vytvoření multiplatformní "retro" hry pro platformy
 od MS-DOS,  UN\*X,  WINDOWS až po webové prohlížeče za využití technologie
 WebAssembly (resp. emscripten.org).
-Bohužel, prozatím se mi nezdařilo adaptovat zejména vstupy uživatele tak,
-aby hra běžela v browserech (JS) a chovala se podobně jako v terminálu.*
+Bohužel, prozatím se mi nezdařilo adaptovat zejména vstupy uživatele
+a práci se soubory tak, aby hra běžela v browserech (JS) a chovala se
+bez zásadních úprav kódu podobně jako v terminálu.*
 
 
 ![Šibenice – ikona](res/github.png)
