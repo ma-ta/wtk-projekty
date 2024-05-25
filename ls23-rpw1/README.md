@@ -1,4 +1,4 @@
-Rozpracované projekty:&nbsp;[alternativy](alternativy)
+*Rozpracované projekty:&nbsp;[alternativy](alternativy)*
 
 # Ročníkový projekt I.
 
@@ -7,6 +7,9 @@ Rozpracované projekty:&nbsp;[alternativy](alternativy)
 Cílem předmětu je samostatné ~~nebo týmové~~ vypracování ročníkového projektu, při jehož zpracování si studenti prakticky osvojují technologický rámec vyučovaný v daném ročníku studia. Výsledkem ročníkového projektu je webová aplikace na zadané téma. V rámci procesu zpracování ročníkového projektu studenti řeší s vyučujícím v semináři dílčí odborná témata vycházející z konkrétního zadání.
 
 ## Výstup projektu:
+
+*Známé nedostatky: [viz errata](errata.md)*
+
 Plně funkční aplikace dle vlastního zadání, navržené zadání je nutné odsouhlasit garantem předmětu.
 
 ## Rozsah zpracování aplikace:
