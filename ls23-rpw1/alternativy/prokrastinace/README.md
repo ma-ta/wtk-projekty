@@ -9,7 +9,8 @@ uživatele, vyžadující zřejmě rozsáhlejší úpravu programu.*
 metoda POST se z hlediska programu jeví jako data na standardním vstupu,
 zatímco k datům zaslaným přes GET lze přistupovat přes proměnnou prostředí QUERY_STRING.
 Výstupy by bylo třeba opatřit HTTP hlavičkou (příp. i několika HTML tagy)&nbsp;&ndash;&nbsp;
-výstupy programu však nejsou centralizovány např. přes jednu funkci/makro.
+výstupy programu však nejsou centralizovány např. přes jednu funkci/makro (nelze upravovat všechna
+místa v kódu, např. vč. záměny znaku '\n' za \<br\>!.
 Dále by bylo třeba vyřešit udržení stavu programu a nespouštět program stále znovu&nbsp;&ndash;&nbsp;
 web by možná mohl komunikovat se zvláštním CGI skriptem, který by byl prostředníkem mezi hrou
 a httpd.*
