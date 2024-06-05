@@ -7,7 +7,7 @@ uživatele, vyžadující zřejmě rozsáhlejší úpravu programu.*
 
 *Alternativou může být webová stránka využívající rozhraní CGI&nbsp;&ndash;&nbsp;
 metoda POST se z hlediska programu jeví jako data na standardním vstupu,
-zatímco datům zaslaným přes GET lze přistupovat přes proměnnou prostředí QUERY_STRING.
+zatímco k datům zaslaným přes GET lze přistupovat přes proměnnou prostředí QUERY_STRING.
 Výstupy by bylo třeba opatřit HTTP hlavičkou (příp. i několika HTML tagy)&nbsp;&ndash;&nbsp;
 výstupy programu však nejsou centralizovány např. přes jednu funkci/makro.
 Dále by bylo třeba vyřešit udržení stavu programu a nespouštět program stále znovu&nbsp;&ndash;&nbsp;
