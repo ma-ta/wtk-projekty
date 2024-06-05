@@ -1,11 +1,18 @@
 # Hra Š I _ E _ I C E
 
-*Původním záměrem bylo vytvoření multiplatformní "retro" hry pro platformy
+*Původním záměrem bylo vytvoření multiplatformní &bdquo;retro&rdquo; hry pro platformy
 od MS-DOS,  UN\*X,  WINDOWS až po webové prohlížeče za využití technologie
-WebAssembly (resp. emscripten.org).
-Bohužel, prozatím se mi nezdařilo adaptovat zejména vstupy uživatele
-a práci se soubory tak, aby hra běžela v browserech (JS) a chovala se
-bez zásadních úprav kódu podobně jako v terminálu.*
+WebAssembly (resp. emscripten.org)&nbsp;&ndash;&nbsp; zde je problém se soubory a vstupem
+uživatele, vyžadující zřejmě rozsáhlejší úpravu programu.*
+
+*Alternativou může být webová stránka využívající rozhraní CGI&nbsp;&ndash;&nbsp;
+metoda POST se z hlediska programu jeví jako data na standardním vstupu,
+zatímco datům zaslaným přes GET lze přistupovat přes proměnnou prostředí QUERY_STRING.
+Výstupy by bylo třeba opatřit HTTP hlavičkou (příp. i několika HTML tagy)&nbsp;&ndash;&nbsp;
+výstupy programu však nejsou centralizovány např. přes jednu funkci/makro.
+Dále by bylo třeba vyřešit udržení stavu programu a nespouštět program stále znovu&nbsp;&ndash;&nbsp;
+web by možná mohl komunikovat se zvláštním CGI skriptem, který by byl prostředníkem mezi hrou
+a httpd.*
 
 
 ![Šibenice – ikona](res/github.png)
